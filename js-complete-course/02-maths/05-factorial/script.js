@@ -15,6 +15,18 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
+        let input=parseInt(document.getElementById("number").value);
+        if (input==0) {
+            alert(1);
+        }
+else {
+    
+    let result=input;
+    for (let i=1; i< input; i++) {
+        result*=i;
+    }
+    alert(result);
+}
         // your code here
 
     });

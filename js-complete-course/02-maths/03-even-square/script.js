@@ -9,11 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function(squareNumbers) {
 
     document.getElementById("run").addEventListener("click", function() {
-
+         
         // your code here
+        for (let i=0; i<=21;i++){
+
+            console.log(i*i)
+           
+        }
 
     });
 

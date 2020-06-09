@@ -16,7 +16,12 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-
+    let input= document.getElementById("numbers").value;
+    let array=input.split(",");
+    let newArray=array.map(function(item){return parseInt(item)})
+    let sort=newArray.sort(function(a, b){return a-b});
+    console.table(sort)
+    
     });
 
 })();

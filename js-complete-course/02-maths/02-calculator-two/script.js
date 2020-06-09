@@ -9,10 +9,33 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-function test() {
-    return true;
+function test(id) {
+    let first = parseFloat(document.getElementById("op-one").value);
+    let second = parseFloat(document.getElementById("op-two").value);
+     switch(id){
+
+        
+         case "addition":
+        
+        return (first + second);
+        
+        case "substraction":
+        
+        return (first - second);
+
+        case "multiplication":
+        
+        return (first * second);
+        
+        case "division":
+        
+        return (first / second);
+    }
 }
 
 (function() {
-    return true;
+    document.getElementsByClassName("actions")[0].addEventListener("click",function(events){
+    let id=events.target.id;
+    alert(test(id));
+    })
 })();
