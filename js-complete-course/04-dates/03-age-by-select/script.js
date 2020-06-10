@@ -12,5 +12,14 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click",function() {
+    let dob= document.getElementById("dob-day").value;
+    let month=document.getElementById("dob-month").value;
+    let year=document.getElementById("dob-year").value; 
+    let today = new Date();
+    let age = today.getFullYear() - year;
+    alert(age)
+
+    });
 
 })();
