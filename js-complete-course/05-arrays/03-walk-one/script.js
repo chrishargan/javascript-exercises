@@ -15,17 +15,21 @@
         "apple",
         "pear",
         "raspberry",
-        "tomatos",
+        "tomatoes",
         "kiwi",
         "banana",
         "orange",
         "mandarin",
         "durian",
-        "peache",
-        "grap",
+        "peach",
+        "grape",
         "cherry",
     ];
-
+    document.getElementById("run").addEventListener("click", function(){
+        for (let i = 0; i < fruits.length; ++i) {
+            alert('value at index [' + i + '] is: [' + fruits[i] + ']');
+          }
+        });
     // your code here
 
 })();

@@ -15,17 +15,20 @@
         "apple",
         "pear",
         "raspberry",
-        "tomatos",
+        "tomatoes",
         "kiwi",
         "banana",
         "orange",
         "mandarin",
         "durian",
         "peache",
-        "grap",
+        "grape",
         "cherry",
     ];
 
     // your code here
-
+    document.getElementById("run").addEventListener("click", function() {
+        
+        console.log(fruits[3]);
+    })
 })();

@@ -11,6 +11,20 @@
 
 (function() {
 
-    // your code here
 
+         document.getElementById("run").addEventListener("click",function(){
+            let yearinput=parseInt(document.getElementById("year").value);
+            for (let month = 0; month < 12; month++) {
+                    let unlucky = new Date(yearinput,month,13);
+                     if(unlucky.getDay() === 5) {
+                        let spookyday = unlucky.toLocaleString("default", {month: "long"});
+                         console.log(spookyday);
+                     }
+                 }
+               
+             
+
+         });
 })();
+
+

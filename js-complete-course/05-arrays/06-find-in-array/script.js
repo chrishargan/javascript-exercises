@@ -11,7 +11,7 @@
 
 (function() {
 
-    var people = [
+    let people = [
         {
             firstname: "Bradford",
             lastname: "Coldbath",
@@ -88,7 +88,23 @@
             email: "gkeatche@google.fr",
         },
     ];
+    
+      
+      document.getElementById("run").addEventListener("click", function(){
+        people.forEach ((person) => {
+            if (person.firstname === "Jean" &&  person.lastname === "Dupont"){
+                console.log(person.email);
+            
+            person.index = people.findIndex((person) => person.firstname === "Jean" &&  person.lastname === "Dupont")
+                console.log(person.index);
+            }
+            
+                
 
-    // your code here
+            
+        });
+      });
+
+
 
 })();
