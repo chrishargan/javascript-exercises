@@ -11,6 +11,20 @@
 
 (function() {
 
-    // your code here
+    
+
+    let image = document.getElementsByTagName("img")[0]
+
+
+    image.addEventListener("mouseover", mouseOver);
+    image.addEventListener("mouseout", mouseOut);
+    
+    function mouseOver() {
+    image.src = image.getAttribute('data-hover');
+    }
+    
+    function mouseOut() {
+    image.src = "../../_shared/img/kiss.svg";
+    }
 
 })();
