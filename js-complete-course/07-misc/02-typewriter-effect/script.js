@@ -9,8 +9,19 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    // your code here
+    let target = document.getElementById("target");
+    let i = 0;
+    let text = target.innerHTML;
+    target.innerHTML = "";
+    function typeWriter() {
+        if (i < text.length) {
+            target.innerHTML += text.charAt(0);
+            i++;
+            setTimeout(typeWriter, Math.floor(Math.random() * 5 + 1) * 100);
+        }
+    }
 
+    typeWriter();
 })();
