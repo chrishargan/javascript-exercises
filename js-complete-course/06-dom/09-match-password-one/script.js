@@ -9,8 +9,30 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+        pass1 = document.getElementById("pass-one").value;
+        pass2 = document.getElementById("pass-two").value;
+
+
+        if (pass1 != pass2) {
+
+            document.getElementById("pass-one").style.borderColor = "red";
+            document.getElementById("pass-two").style.borderColor = "red";
+            console.log("Passwords do not match")
+        }
+
+        else {
+            console.log("Succesful login");
+
+        }
+
+
+
+
+
+    });
 
 })();
