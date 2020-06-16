@@ -9,22 +9,22 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    
+
 
     let image = document.getElementsByTagName("img")[0]
 
 
     image.addEventListener("mouseover", mouseOver);
     image.addEventListener("mouseout", mouseOut);
-    
+
     function mouseOver() {
-    image.src = image.getAttribute('data-hover');
+        image.src = image.getAttribute('data-hover');
     }
-    
+
     function mouseOut() {
-    image.src = "../../_shared/img/kiss.svg";
+        image.src = "../../_shared/img/kiss.svg";
     }
 
 })();

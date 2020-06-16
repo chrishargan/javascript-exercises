@@ -9,9 +9,9 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    var gallery= [
+    var gallery = [
         "../../_shared/img/bell.svg",
         "../../_shared/img/clock.svg",
         "../../_shared/img/compass.svg",
@@ -19,19 +19,19 @@
         "../../_shared/img/map.svg",
     ];
 
-    
+
     const img = document.getElementsByTagName('img')[0];
-    document.getElementById('next').addEventListener('click',()=>{
-        
+    document.getElementById('next').addEventListener('click', () => {
+
         let index;
-        for (let i=0;i<gallery.length;i++){
-            
-            if (img.getAttribute('src') == gallery[i]){
+        for (let i = 0; i < gallery.length; i++) {
+
+            if (img.getAttribute('src') == gallery[i]) {
                 index = i;
             }
         }
-         
-        if (index == 4){
+
+        if (index == 4) {
             img.src = gallery[0];
         } else {
             img.src = gallery[index + 1];
