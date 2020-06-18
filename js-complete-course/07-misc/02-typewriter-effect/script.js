@@ -17,9 +17,9 @@
     target.innerHTML = "";
     function typeWriter() {
         if (i < text.length) {
-            target.innerHTML += text.charAt(0);
+            target.innerHTML += text.charAt(i);
             i++;
-            setTimeout(typeWriter, Math.floor(Math.random() * 5 + 1) * 100);
+            setTimeout(typeWriter, Math.floor(Math.random() * 7 + 1) * 100);
         }
     }
 

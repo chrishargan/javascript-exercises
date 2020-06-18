@@ -9,8 +9,17 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    // your code here
+    let slider = document.getElementById("slider");
+    let output = document.getElementById("target");
+
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+        output.innerHTML = `0${slider.value}`;
+    }
+
+
 
 })();
