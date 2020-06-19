@@ -10,5 +10,10 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("run").addEventListener("click", () => {
+    lib.getPosts((error, articles) => {
+      console.log(articles); //randomly generated list of articles
+      console.log(error); //null
+    });
+  });
 })();

@@ -10,5 +10,12 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  async function processPosts() {
+    let posts = await window.lib.getPosts();
+    console.log("posts", posts);
+    return posts;
+  }
+
+  let posts = processPosts();
+  console.log(posts);
 })();

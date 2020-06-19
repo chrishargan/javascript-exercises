@@ -10,5 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  function callback(_, posts) {
+    return "test";
+  }
+  document.querySelector("#run").addEventListener("click", () => {
+    window.lib.getPosts((_, posts) => {
+      console.log(posts);
+
+      posts.forEach((post) => {
+        console.log(post);
+        window.lib.getComments(post.id, (_, comments) => {
+          post.comments = comments;
+          console.table(comments);
+        });
+      });
+    });
+  });
 })();

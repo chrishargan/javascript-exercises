@@ -28,3 +28,14 @@
 })();
 
 
+/*const WHICH_DATE_TO_CHECK =13
+const WHICH_DAY_OF_THE_WEEK = 5
+
+document.querySelector("#run").addEventListener("click", ()=> {
+    let year = parseInt(document.querySelector("#year").value);
+
+    for (let month =0; month < 12; month++) {
+        let checkDate =new Date (year, month, WHICH_DATE_TO_CHECK)
+    } 
+
+}

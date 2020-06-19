@@ -59,3 +59,28 @@
 
 
 })();
+
+/*(function () {
+document.querySelector("#target").innerHTML = "test";
+let word = document.querySelector("#target").innerHTML;
+
+let sizes = (10, 12, 14, 16,18);
+let counter = 0
+for (let i = 0; i < word.length; i++) {
+	if (sizes.length === counter) {
+		sizes = sizes.reverse();
+		counter = 0;
+	}
+
+	let span = document.createElement("span");
+	span.innerHTML = word[i];
+    span.style.fontSize = sizes[counter++] "px";
+	
+	document.querySelector("#target").appendChild(span);
+
+
+}
+
+
+};
+

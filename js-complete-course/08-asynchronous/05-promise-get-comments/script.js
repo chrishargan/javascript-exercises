@@ -9,6 +9,19 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
-    // your code here
-})();
+() => {
+  let promise = window.lib.getPosts();
+  promise.then(
+    (posts) => {
+      posts.forEach((posts) => {
+        let innerPromise = window.lib.getComments(post.id);
+        innerPromise.then(() => {
+          console.table(comments);
+        });
+      });
+    },
+    () => {
+      alert("ERROR");
+    }
+  );
+};
