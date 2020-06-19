@@ -10,9 +10,6 @@
 // You will have time to focus on it later.
 
 (() => {
-  function callback(_, posts) {
-    return "test";
-  }
   document.querySelector("#run").addEventListener("click", () => {
     window.lib.getPosts((_, posts) => {
       console.log(posts);

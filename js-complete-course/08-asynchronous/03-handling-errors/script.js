@@ -10,5 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.querySelector("#run").addEventListener("click", () => {
+    window.lib.getPersons((error, person) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(person);
+      }
+    });
+  });
 })();
