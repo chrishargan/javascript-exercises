@@ -11,9 +11,9 @@
 
 (() => {
   document.querySelector("#run").addEventListener("click", () => {
-    async function processPersons(personId) {
-      let persons = await window.lib.getPersons(personId);
-      console.log(person.id);
+    async function processPersons() {
+      let persons = await window.lib.getPersons();
+      console.log(persons);
     }
     processPersons();
   });
