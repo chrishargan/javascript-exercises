@@ -9,19 +9,17 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-() => {
-  let promise = window.lib.getPosts();
-  promise.then(
-    (posts) => {
-      posts.forEach((posts) => {
-        let innerPromise = window.lib.getComments(post.id);
-        innerPromise.then(() => {
-          console.table(comments);
+(() => {
+  document.querySelector("#run").addEventListener("click", () => {
+    let promise = window.lib.getPosts();
+    promise
+      .then((posts) => {
+        posts.forEach((post) => {
+          window.lib.getComments(post.id).then((comments) => {
+            console.table(comments);
+          });
         });
-      });
-    },
-    () => {
-      alert("ERROR");
-    }
-  );
-};
+      })
+      .catch((error) => console.log("error"));
+  });
+})();

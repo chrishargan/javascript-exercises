@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.querySelector("#run").addEventListener("click", function () {
+    let promise = window.lib.getPersons();
+    promise
+      .then((people) => {
+        people.forEach((person) => {
+          console.log(people);
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
 })();

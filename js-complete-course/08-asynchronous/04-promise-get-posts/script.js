@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.querySelector("#run").addEventListener("click", () => {
+    let promise = window.lib.getPosts();
+    promise
+      .then((posts) => {
+        posts.forEach((post) => {
+          window.lib.getComments(post.id).then((comments) => {
+            console.table(comments);
+          });
+        });
+      })
+      .catch((error) => console.log("error"));
+  });
 })();

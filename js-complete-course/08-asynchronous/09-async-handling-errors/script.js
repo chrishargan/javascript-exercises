@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.querySelector("#run").addEventListener("click", () => {
+    async function processPersons(personId) {
+      let persons = await window.lib.getPersons(personId);
+      console.log(person.id);
+    }
+    processPersons();
+  });
 })();
