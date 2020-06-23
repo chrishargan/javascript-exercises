@@ -12,8 +12,13 @@
 (() => {
   document.getElementById("run").addEventListener("click", () => {
     lib.getPosts((error, articles) => {
-      console.log(articles); //randomly generated list of articles
-      console.log(error); //null
+      if (error) {
+        console.log(error);
+      }
+      else {
+        console.log(articles);
+      }
+       //randomly generated list of articles
     });
   });
 })();

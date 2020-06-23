@@ -10,5 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("run").addEventListener("click", () => {
+    fetch("../../_shared/api.json")
+        .then(response => {                       // once json is received
+          response.json()      // the "response" refers to what we are doing to the now fetched
+            // file, in this case .json converts it into a actual json file format as an array in this case.
+        })
+
+        .then(data => console.log(data))                                               // then we are performing a function console logging that result.
+        .catch(error => {
+          console.log(error)
+        })
+  })
 })();
+
+
+
+

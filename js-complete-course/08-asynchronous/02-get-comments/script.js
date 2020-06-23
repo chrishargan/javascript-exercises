@@ -11,16 +11,23 @@
 
 (() => {
   document.querySelector("#run").addEventListener("click", () => {
-    window.lib.getPosts((_, posts) => {
-      console.log(posts);
+    window.lib.getPosts((error, posts) => {
+      if (error){
+        console.log(error)
+      }
+      else {
+        console.log(posts);
+      }
 
-      posts.forEach((post) => {
-        console.log(post);
-        window.lib.getComments(post.id, (_, comments) => {
-          post.comments = comments;
-          console.table(comments);
+
+      posts.forEach((item) => {
+        window.lib.getComments(item.id, (error, comments) => {
+          item.comments = comments;          //the same as if item[comments] to add a property to the object within he array
+          console.log(comments);
         });
       });
     });
   });
 })();
+
+
